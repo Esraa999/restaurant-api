@@ -665,22 +665,6 @@ This project utilized AI coding assistance for:
 3. **Database Logs**: Check SQL Server error logs
 4. **Application Logs**: Console output from uvicorn
 
-### Interview Discussion Points
-
-Be prepared to discuss:
-- ✅ Data analysis findings (Task 1)
-- ✅ API design decisions
-- ✅ Database schema choices
-- ✅ Security implementations
-- ✅ Performance optimizations
-- ✅ How AI assistance was used
-- ✅ Testing approach
-
----
-
-## 📄 License
-
-MIT License - Free to use for educational and commercial purposes.
 
 ---
 
