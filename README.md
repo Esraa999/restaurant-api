@@ -159,7 +159,7 @@ restaurant-order-api/
 
 ```bash
 # If using git
-git clone <repository-url>
+git clone (https://github.com/Esraa999/restaurant-api)
 cd restaurant-order-api
 
 # Or extract the ZIP file
