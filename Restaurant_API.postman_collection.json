@@ -1,0 +1,165 @@
+{
+  "info": {
+    "name": "Restaurant Order Management API",
+    "description": "Complete API collection for testing the Restaurant Order Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health & Status",
+      "item": [
+        {
+          "name": "Root - API Info",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": [""]
+            },
+            "description": "Get basic API information"
+          }
+        },
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/health",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["health"]
+            },
+            "description": "Check API and database connectivity status"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Orders - Main Endpoints",
+      "item": [
+        {
+          "name": "🌟 Get All Orders (Complete Details)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/orders/complete/all",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "orders", "complete", "all"]
+            },
+            "description": "**MAIN ASSESSMENT ENDPOINT (Task 2)**\n\nRetrieves ALL orders with:\n- Complete order information\n- All order items with prices and quantities\n- Menu and category information\n- All payment records with tips and discounts\n- Calculated totals and balances"
+          }
+        },
+        {
+          "name": "Get All Orders (Summary)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/orders",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "orders"]
+            },
+            "description": "Get list of all orders with summary information"
+          }
+        },
+        {
+          "name": "Get Orders - Filter by Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/orders?status=Completed",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "orders"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "Completed",
+                  "description": "Filter by order status"
+                }
+              ]
+            },
+            "description": "Filter orders by status (e.g., Completed, Pending)"
+          }
+        },
+        {
+          "name": "Get Orders - Filter by Date",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/orders?date=2025-10-01",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "orders"],
+              "query": [
+                {
+                  "key": "date",
+                  "value": "2025-10-01",
+                  "description": "Filter by order date (YYYY-MM-DD)"
+                }
+              ]
+            },
+            "description": "Filter orders by specific date"
+          }
+        },
+        {
+          "name": "Get Specific Order Details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/orders/10",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "orders", "10"]
+            },
+            "description": "Get complete details for a specific order by ID"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Statistics",
+      "item": [
+        {
+          "name": "Business Statistics Overview",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8000/api/statistics/overview",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["api", "statistics", "overview"]
+            },
+            "description": "Get overall business statistics including total orders, revenue, and payments"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8000",
+      "type": "string"
+    }
+  ]
+}
